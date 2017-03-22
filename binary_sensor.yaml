@@ -2,6 +2,10 @@
   resource: !env_var DESK_HID_IDLE_TIME_RESOURCE
   name: Desk active
   value_template: '{{ value_json < 60}}'
+- platform: rest
+  resource: !env_var THINKING_FULL_STATUS
+  name: downstairsroomba_bin
+  value_template: '{{ value_json.tc_status.bin_status }}'
 - platform: template
   sensors:
     rain_today:

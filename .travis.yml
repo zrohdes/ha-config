@@ -68,6 +68,7 @@ env:
   SMOKEPING_LINK=http://example.com
   SSL_CERTIFICATE=/tmp/cert.pem
   SSL_KEY=/tmp/key.pem
+  THINKING_FULL_STATUS=http://example.com
   TRUSTED_NETWORK_1=0.0.0.0/0
   TRUSTED_NETWORK_2=0.0.0.0/0
   TRUSTED_NETWORK_3=0.0.0.0/0

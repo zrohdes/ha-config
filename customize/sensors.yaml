@@ -4,6 +4,7 @@ sensor.downstairsroomba_capacity:
   friendly_name: Capacity
 sensor.downstairsroomba_state:
   friendly_name: Roomba
+  icon: mdi:robot
 sensor.haconfig_branch:
   friendly_name: Branch
   icon: mdi:source-branch

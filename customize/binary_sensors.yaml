@@ -1,2 +1,6 @@
 binary_sensor.desk_active:
   friendly_name: Desk
+binary_sensor.downstairsroomba_bin:
+  friendly_name: Bin full
+  device_class: safety
+  icon: mdi:robot

@@ -1,0 +1,3 @@
+platform: ups
+username: !env_var UPS_USERNAME
+password: !env_var UPS_PASSWORD

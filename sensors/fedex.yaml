@@ -1,0 +1,3 @@
+platform: fedex
+username: !env_var FEDEX_USERNAME
+password: !env_var FEDEX_PASSWORD

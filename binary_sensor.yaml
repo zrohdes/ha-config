@@ -51,3 +51,15 @@
           distance(states.device_tracker.jphone_6s, states.device_tracker.katies_iphone) != None and
           distance(states.device_tracker.jphone_6s, states.device_tracker.katies_iphone) < 0.25
         }}
+    motion_upstairs:
+      friendly_name: 'Motion upstairs'
+      entity_id:
+        - binary_sensor.master_bath_motion_37
+        - binary_sensor.master_motion_92
+        - binary_sensor.upstairs_motion_87
+      value_template: |
+        {{
+          is_state('binary_sensor.master_bath_motion_37', 'on') or
+          is_state('binary_sensor.master_motion_92', 'on') or
+          is_state('binary_sensor.upstairs_motion_87', 'on')
+        }}

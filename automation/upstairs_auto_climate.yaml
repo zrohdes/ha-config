@@ -1,0 +1,33 @@
+# If motion is ever detected upstairs
+alias: Upstairs auto climate
+trigger:
+  - platform: state
+    entity_id: binary_sensor.motion_upstairs
+    to: 'on'
+condition:
+  condition: template
+  value_template: '
+    {{
+      states.input_select.mode.state != "Pause"
+    }}'
+action:
+  - service: climate.set_operation_mode
+    data_template:
+      entity_id: climate.upstairs_28
+      operation_mode: >-
+        {% if states.climate.upstairs_28.attributes.current_temperature | default(72) > 72 %}
+        Cool
+        {% else %}
+        Heat
+        {% endif %}
+  # TODO: This isn't nice to human operators, as it could change a value they
+  # set when they move around. Consider ways to make this friendlier.
+  - service: climate.set_temperature
+    data_template:
+      entity_id: climate.upstairs_28
+      temperature: >-
+        {% if states.climate.upstairs_28.attributes.current_temperature | default(72) > 72 %}
+        74
+        {% else %}
+        70
+        {% endif %}

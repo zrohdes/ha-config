@@ -1,2 +1,4 @@
 input_boolean.guests:
   friendly_name: Guests present?
+input_boolean.autodeploy:
+  emulated_hue: true

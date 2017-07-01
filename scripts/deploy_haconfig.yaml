@@ -1,3 +1,6 @@
 sequence:
+- condition: state
+  entity_id: input_boolean.autodeploy
+  state: 'on'
 - service: shell_command.update_config
 - service: homeassistant.restart

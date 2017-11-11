@@ -1,0 +1,3 @@
+entities:
+- sensor.washer_current_power_w
+- sensor.washer_current_energy_kwh

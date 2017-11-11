@@ -6,3 +6,4 @@ entities:
 - history_graph.indoor_temperatures
 - history_graph.outdoor_temperatures
 - history_graph.indoor_humidity
+- history_graph.washer

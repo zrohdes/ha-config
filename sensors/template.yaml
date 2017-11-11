@@ -41,3 +41,17 @@ sensors:
       {% if states.climate.upstairs_28 %}
         {{ states.climate.upstairs_28.attributes.current_temperature }}
       {% endif %}
+  washer_current_power_w:
+    entity_id: switch.washer_47
+    unit_of_measurement: 'W'
+    value_template: |
+      {% if switch.washer_47 %}
+        {{ states.switch.washer_47.attributes.current_power_w }}
+      {% endif %}
+  washer_current_energy_kwh:
+    entity_id: switch.washer_47
+    unit_of_measurement: 'kWh'
+    value_template: |
+      {% if switch.washer_47 %}
+        {{ states.switch.washer_47.attributes.current_energy_kwh }}
+      {% endif %}

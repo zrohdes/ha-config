@@ -30,7 +30,7 @@ binary_sensor.wine_room_motion_97:
   trigger_entity_id_off: light.wine_room_25
 binary_sensor.hall_motion_92:
   zone: Hall
-  trigger_entity_id: group.hall_overhead
+  trigger_entity_id: light.guest_hall_16
 binary_sensor.music_room_motion_107:
   friendly_name: music room motion
   zone: Music room
@@ -59,3 +59,7 @@ binary_sensor.roomba_downstairs_bin_full:
 binary_sensor.desk_camera:
   trigger_entity_id: light.desk_63
   icon: mdi:camera-iris
+binary_sensor.garage_hall_motion_132:
+  trigger_entity_id: light.garage_hall_50
+binary_sensor.great_hall_motion_131:
+  trigger_entity_id: light.great_hall_24
